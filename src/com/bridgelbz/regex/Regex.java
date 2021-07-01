@@ -7,60 +7,78 @@ import java.util.regex.Pattern;
 public class Regex {
 	public static void main(String[] args) {
 // 		Veriable
-		String f;
+		String firstName;
 		Scanner SC = new Scanner(System.in);
 		System.out.println("Enter Your First Name :-");
-		f = SC.next();
+		firstName = SC.next();
 		Pattern pattern = Pattern.compile("^[A-Z]{1}[a-z]{2}$");
-		Matcher matcher = pattern.matcher(f);
+		Matcher matcher = pattern.matcher(firstName);
 //		Condition
-		boolean matchFound = matcher.find();
+		boolean matchFound = matcher.matches();
 		if (matchFound) {
 			System.out.println("First Name is Correct");
 		} else {
 			System.out.println("First Namer is Inorrect");
 		}
 		System.out.println();
-		String l;
+
+		String lastName;
 		Scanner scan1 = new Scanner(System.in);
 		System.out.println("Enter Your Last Name :-");
-		l = scan1.next();
+		lastName = scan1.next();
 		Pattern pattern1 = Pattern.compile("^[A-Z]{1}[a-z]{2}$");
-		Matcher matcher1 = pattern1.matcher(l);
+		Matcher matcher1 = pattern1.matcher(lastName);
 //		Condition
-		boolean matchFound1 = matcher1.find();
+		boolean matchFound1 = matcher1.matches();
 		if (matchFound1) {
 			System.out.println("Last Name is Correct");
 		} else {
 			System.out.println("Last Name is Inorrect");
 		}
 		System.out.println();
-		String e;
+
+		String email;
 		Scanner scan2 = new Scanner(System.in);
 		System.out.println("Enter Your E-mail Id :-");
-		e = scan2.next();
+		email = scan2.next();
 		Pattern pattern2 = Pattern.compile("^[a-z0-9+_.-]+@[a-zA-Z0-9.-]+$");
-		Matcher matcher2 = pattern2.matcher(e);
+		Matcher matcher2 = pattern2.matcher(email);
 //		Condition
-		boolean matchFound2 = matcher2.find();
+		boolean matchFound2 = matcher2.matches();
 		if (matchFound2) {
 			System.out.println("E-mail Id is Correct");
 		} else {
 			System.out.println("E-mail Id is Inorrect");
 		}
 		System.out.println();
-		String m;
+
+		String mobilNumber;
 		Scanner scan3 = new Scanner(System.in);
 		System.out.println("Enter Your Mobile No. :-");
-		m = scan3.next();
+		mobilNumber = scan3.next();
 		Pattern pattern3 = Pattern.compile("^(0|91)?[7-9][0-9]{9}$");
-		Matcher matcher3 = pattern3.matcher(m);
-
-		boolean matchFound3 = matcher3.find();
+		Matcher matcher3 = pattern3.matcher(mobilNumber);
+		boolean matchFound3 = matcher3.matches();
 		if (matchFound3) {
 			System.out.println("Mobile Number is Correct");
 		} else {
 			System.out.println("Mobile Number is Inorrect");
 		}
+		System.out.println();
+
+		String pass1;
+		Scanner scan4 = new Scanner(System.in);
+		System.out.println("Enter Your Password :-");
+		pass1 = scan4.next();
+		Pattern pattern4 = Pattern.compile("^[a-zA-Z0-9+_.@-]{8}+$");
+		Matcher matcher4 = pattern4.matcher(pass1);
+//		Condition
+		boolean matchFound4 = matcher4.matches();
+		if (matchFound4) {
+			System.out.println("Password is Correct");
+		} else {
+			System.out.println("Password is Inorrect");
+		}
+		System.out.println();
 	}
 }
