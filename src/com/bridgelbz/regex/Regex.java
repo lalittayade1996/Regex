@@ -13,27 +13,41 @@ public class Regex {
 		f = SC.next();
 		Pattern pattern = Pattern.compile("^[A-Z]{1}[a-z]{2}$");
 		Matcher matcher = pattern.matcher(f);
-
-		String l;
-		Scanner scan = new Scanner(System.in);
-		System.out.println("Enter Your Last Name :-");
-		l = scan.next();
-		Pattern pattern1 = Pattern.compile("^[A-Z]{1}[a-z]{2}$");
-		Matcher matcher1 = pattern1.matcher(l);
-
-		String e;
-		Scanner scan2 = new Scanner(System.in);
-		System.out.println("Enter Your E-mail Id :-");
-		e = SC.next();
-		Pattern pattern2 = Pattern.compile("^[a-zA-Z0-9+_.-]+@[a-zA-Z0-9.-]+$");
-		Matcher matcher2 = pattern2.matcher(e);
-
-//	System.out.println(i);
+//		Condition
 		boolean matchFound = matcher.find();
 		if (matchFound) {
 			System.out.println("According To Pattern Matcher is Correct");
 		} else {
 			System.out.println("According To Pattern Matcher is Inorrect");
 		}
+		System.out.println();
+		String l;
+		Scanner scan1 = new Scanner(System.in);
+		System.out.println("Enter Your Last Name :-");
+		l = scan1.next();
+		Pattern pattern1 = Pattern.compile("^[A-Z]{1}[a-z]{2}$");
+		Matcher matcher1 = pattern1.matcher(l);
+//		Condition
+		boolean matchFound1 = matcher1.find();
+		if (matchFound1) {
+			System.out.println("According To Pattern Matcher is Correct");
+		} else {
+			System.out.println("According To Pattern Matcher is Inorrect");
+		}
+		System.out.println();
+		String e;
+		Scanner scan2 = new Scanner(System.in);
+		System.out.println("Enter Your E-mail Id :-");
+		e = scan2.next();
+		Pattern pattern2 = Pattern.compile("^[a-zA-Z0-9+_.-]+@[a-zA-Z0-9.-]+$");
+		Matcher matcher2 = pattern2.matcher(e);
+//		Condition
+		boolean matchFound2 = matcher2.find();
+		if (matchFound2) {
+			System.out.println("According To Pattern Matcher is Correct");
+		} else {
+			System.out.println("According To Pattern Matcher is Inorrect");
+		}
+
 	}
 }
