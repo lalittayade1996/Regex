@@ -16,9 +16,9 @@ public class Regex {
 //		Condition
 		boolean matchFound = matcher.find();
 		if (matchFound) {
-			System.out.println("According To Pattern Matcher is Correct");
+			System.out.println("First Name is Correct");
 		} else {
-			System.out.println("According To Pattern Matcher is Inorrect");
+			System.out.println("First Namer is Inorrect");
 		}
 		System.out.println();
 		String l;
@@ -30,24 +30,37 @@ public class Regex {
 //		Condition
 		boolean matchFound1 = matcher1.find();
 		if (matchFound1) {
-			System.out.println("According To Pattern Matcher is Correct");
+			System.out.println("Last Name is Correct");
 		} else {
-			System.out.println("According To Pattern Matcher is Inorrect");
+			System.out.println("Last Name is Inorrect");
 		}
 		System.out.println();
 		String e;
 		Scanner scan2 = new Scanner(System.in);
 		System.out.println("Enter Your E-mail Id :-");
 		e = scan2.next();
-		Pattern pattern2 = Pattern.compile("^[a-zA-Z0-9+_.-]+@[a-zA-Z0-9.-]+$");
+		Pattern pattern2 = Pattern.compile("^[a-z0-9+_.-]+@[a-zA-Z0-9.-]+$");
 		Matcher matcher2 = pattern2.matcher(e);
 //		Condition
 		boolean matchFound2 = matcher2.find();
 		if (matchFound2) {
-			System.out.println("According To Pattern Matcher is Correct");
+			System.out.println("E-mail Id is Correct");
 		} else {
-			System.out.println("According To Pattern Matcher is Inorrect");
+			System.out.println("E-mail Id is Inorrect");
 		}
+		System.out.println();
+		String m;
+		Scanner scan3 = new Scanner(System.in);
+		System.out.println("Enter Your Mobile No. :-");
+		m = scan3.next();
+		Pattern pattern3 = Pattern.compile("^(0|91)?[7-9][0-9]{9}$");
+		Matcher matcher3 = pattern3.matcher(m);
 
+		boolean matchFound3 = matcher3.find();
+		if (matchFound3) {
+			System.out.println("Mobile Number is Correct");
+		} else {
+			System.out.println("Mobile Number is Inorrect");
+		}
 	}
 }
