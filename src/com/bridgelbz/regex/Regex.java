@@ -6,18 +6,20 @@ import java.util.regex.Pattern;
 
 public class Regex {
 	public static void main(String[] args) {
-//		Veriable 
-		String i;
-		System.out.println("Enter Your First Name :-");
-
-//		Scanner 
+// 		Veriable
+		String f;
 		Scanner SC = new Scanner(System.in);
-		i = SC.next();
+		System.out.println("Enter Your First Name :-");
+		f = SC.next();
 
-//		Regex Syntax
+		System.out.println("Enter Your Last Name :-");
+		f = SC.next();
+
+// 		Regex Syntax
 		Pattern pattern = Pattern.compile("^[A-Z]{1}[a-z]{2}$");
-		Matcher matcher = pattern.matcher(i);
-//		System.out.println(i);
+		Matcher matcher = pattern.matcher(f);
+
+//	System.out.println(i);
 		boolean matchFound = matcher.find();
 		if (matchFound) {
 			System.out.println("According To Pattern Matcher is Correct");
