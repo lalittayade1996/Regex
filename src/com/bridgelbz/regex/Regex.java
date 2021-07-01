@@ -21,6 +21,13 @@ public class Regex {
 		Pattern pattern1 = Pattern.compile("^[A-Z]{1}[a-z]{2}$");
 		Matcher matcher1 = pattern1.matcher(l);
 
+		String e;
+		Scanner scan2 = new Scanner(System.in);
+		System.out.println("Enter Your E-mail Id :-");
+		e = SC.next();
+		Pattern pattern2 = Pattern.compile("^[a-zA-Z0-9+_.-]+@[a-zA-Z0-9.-]+$");
+		Matcher matcher2 = pattern2.matcher(e);
+
 //	System.out.println(i);
 		boolean matchFound = matcher.find();
 		if (matchFound) {
