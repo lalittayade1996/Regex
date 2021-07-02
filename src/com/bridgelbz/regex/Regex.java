@@ -70,10 +70,25 @@ public class Regex {
 		Scanner scan4 = new Scanner(System.in);
 		System.out.println("Enter Your Password :-");
 		pass1 = scan4.next();
-		Pattern pattern4 = Pattern.compile("^[a-zA-Z0-9+_.@-]{8}+$");
+		Pattern pattern4 = Pattern.compile("^[a-z]{8}+$");
 		Matcher matcher4 = pattern4.matcher(pass1);
 //		Condition
 		boolean matchFound4 = matcher4.matches();
+		if (matchFound4) {
+			System.out.println("Password is Correct");
+		} else {
+			System.out.println("Password is Inorrect");
+		}
+		System.out.println();
+
+		String pass2;
+		Scanner scan5 = new Scanner(System.in);
+		System.out.println("Enter Your Password :-");
+		pass2 = scan5.next();
+		Pattern pattern5 = Pattern.compile("^[a-zA-Z]{8}+$");
+		Matcher matcher5 = pattern5.matcher(pass2);
+//		Condition
+		boolean matchFound5 = matcher5.matches();
 		if (matchFound4) {
 			System.out.println("Password is Correct");
 		} else {
